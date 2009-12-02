@@ -40,22 +40,21 @@ Screenshots
 
 ![Screenshot 1](http://github.com/Rendez/PassShark/raw/master/Docs/screenshot1.png)
 
-Acknowledgements
------------------
 
-* Features and Compatibility
+Features and Compatibility
+-----------------
 	* Written in MooTools. Requires -Core version 1.2.4 + and -More 1.2.4.2 +.
 	* Tested on Safari 3+, Firefox 3+, Opera 10+, Internet Explorer 6 and 7.
 	* No need to modify your original HTML. The password field is automatically found by type (input type="password").
 	* Unobtrusive: users with Javascript deactivated still get the standard 'masked' password field.
 	* Supports copy & paste.
 
-
-* Notes
+Notes
+-----------------
 	* The "onStateChange" event is commented so that the activate() and deactivate() methods, when implemented, can be executed with fireEvent() if needed.
 
-
-* PassShark with MooTools resolves many issues found in other implementations:
+PassShark with MooTools resolves many issues found in other implementations
+-----------------
 	* Inability to use ' (apostrophe) characters.
 	* The cursor would move to the end on any key stroke, especially annoying 
 if the cursor is elsewhere.
@@ -66,10 +65,10 @@ field is focused, which is irritating if the input field is previously unfocused
 above and others.
 	* Deleting a single character wouldn't work if the character was not the last one.
 
-
-* Known issues
+Known Issues
+-----------------
 	* None
 
-
-* License
+License
+-----------------
 	* PassShark is released under the Open Source MIT license.
