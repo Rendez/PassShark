@@ -50,8 +50,10 @@ Acknowledgements
 	* Unobtrusive: users with Javascript deactivated still get the standard 'masked' password field.
 	* Supports copy & paste.
 
+
 * Notes
 	* The "onStateChange" event is commented so that the activate() and deactivate() methods, when implemented, can be executed with fireEvent() if needed.
+
 
 * PassShark with MooTools resolves many issues found in other implementations:
 	* Inability to use ' (apostrophe) characters.
@@ -64,8 +66,10 @@ field is focused, which is irritating if the input field is previously unfocused
 above and others.
 	* Deleting a single character wouldn't work if the character was not the last one.
 
+
 * Known issues
 	* None
+
 
 * License
 	* PassShark is released under the Open Source MIT license.
