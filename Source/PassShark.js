@@ -1,22 +1,19 @@
 /*
 ---
-Description: PassShark v1.0 - iPhone style password masking using MooTools.
+description:     PassShark v1.0 - iPhone style password masking using MooTools.
 
-License: MIT-style
+authors:
+  - Luis Merino (http://luismerino.name)
+  - Nathan Querido (demo writeup) (http://queridodesign.net)
 
-Authors:
-- Luis Merino
-- Nathan Querido (demo writeup)
+license:
+  - MIT-style license
 
-Copyright:
-- Luis Merino
-- QUERIDODESIGN
-
-Requires:
+requires:
   core/1.2.4:   '*'
-  more/1.2.1:   'Class.Occlude.js','Log.js','Class.Binds.js'
+  more/1.2.4.1:   'Class.Occlude.js','Log.js','Class.Binds.js'
 
-Provides:
+provides:
   - PassShark
 ...
 */
