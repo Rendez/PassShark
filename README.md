@@ -5,7 +5,7 @@ PassShark.js is a free and easy-to-implement *password masking* class developed
 using MooTools. Inspired and based on the excellent iPhone and iPod touch 
 password dialogue.
 
-![Screenshot](http://github.com/Rendez/PassShark/blob/master/Docs/screenshot1.png)
+![Screenshot](http://github.com/Rendez/PassShark/raw/master/Docs/screenshot1.png)
 
 How to use
 ----------
@@ -38,7 +38,7 @@ How to use
 Screenshots
 -----------
 
-![Screenshot 1](http://github.com/Rendez/PassShark/blob/master/Docs/screenshot1.png)
+![Screenshot 1](http://github.com/Rendez/PassShark/raw/master/Docs/screenshot1.png)
 
 Acknowledgements
 -----------------

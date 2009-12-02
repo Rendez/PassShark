@@ -12,11 +12,12 @@ Copyright:
 - Luis Merino
 - QUERIDODESIGN
 
-Dependencies:
-- MooTools-Core
-- MooTools-More > Class.Occlude.js
-- MooTools-More > Log.js
-- MooTools-More > Class.Binds.js
+Requires:
+  core/1.2.4:   '*'
+  more/1.2.1:   'Class.Occlude.js','Log.js','Class.Binds.js'
+
+Provides:
+  - PassShark
 ...
 */
 
