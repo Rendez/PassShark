@@ -43,32 +43,32 @@ Screenshots
 
 Features and Compatibility
 -----------------
-	* Written in MooTools. Requires -Core version 1.2.4 + and -More 1.2.4.2 +.
-	* Tested on Safari 3+, Firefox 3+, Opera 10+, Internet Explorer 6 and 7.
-	* No need to modify your original HTML. The password field is automatically found by type (input type="password").
-	* Unobtrusive: users with Javascript deactivated still get the standard 'masked' password field.
-	* Supports copy & paste.
+* Written in MooTools. Requires -Core version 1.2.4 + and -More 1.2.4.2 +.
+* Tested on Safari 3+, Firefox 3+, Opera 10+, Internet Explorer 6 and 7.
+* No need to modify your original HTML. The password field is automatically found by type (input type="password").
+* Unobtrusive: users with Javascript deactivated still get the standard 'masked' password field.
+* Supports copy & paste.
 
 Notes
 -----------------
-	* The "onStateChange" event is commented so that the activate() and deactivate() methods, when implemented, can be executed with fireEvent() if needed.
+* The "onStateChange" event is commented so that the activate() and deactivate() methods, when implemented, can be executed with fireEvent() if needed.
 
 PassShark with MooTools resolves many issues found in other implementations
 -----------------
-	* Inability to use ' (apostrophe) characters.
-	* The cursor would move to the end on any key stroke, especially annoying 
+* Inability to use ' (apostrophe) characters.
+* The cursor would move to the end on any key stroke, especially annoying 
 if the cursor is elsewhere.
-	* When converting the last character-to-symbol with the a duration delay, the input
+* When converting the last character-to-symbol with the a duration delay, the input
 field is focused, which is irritating if the input field is previously unfocused (blur).
-	* Errors on deletion of the original field value, which is highly unsafe.
-	* Deleting a multiple character selection would cause the same errors as stated
+* Errors on deletion of the original field value, which is highly unsafe.
+* Deleting a multiple character selection would cause the same errors as stated
 above and others.
-	* Deleting a single character wouldn't work if the character was not the last one.
+* Deleting a single character wouldn't work if the character was not the last one.
 
 Known Issues
 -----------------
-	* None
+* None
 
 License
 -----------------
-	* PassShark is released under the Open Source MIT license.
+* PassShark is released under the Open Source MIT license.
