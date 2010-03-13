@@ -206,5 +206,5 @@ var PassShark = new Class({
 	/** TODO:
 	* Implement: activate(), deactivate() fireEvent:onStateChange
 	*/
-
+	
 });
