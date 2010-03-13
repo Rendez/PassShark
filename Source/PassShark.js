@@ -107,7 +107,7 @@ var PassShark = new Class({
 		this.element.store('focus', 0);
 		this.checker = $clear(this.checker);
 	},
-	
+
 	_onDeletion: function(caret, diff){
 		var value = this.origElement.get('value');
 		var split = caret;
