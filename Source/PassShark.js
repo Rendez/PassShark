@@ -1,6 +1,6 @@
 /*
 ---
-description:     PassShark v1.0 - iPhone style password masking using MooTools.
+description:     PassShark v1.1 - iPhone style password masking using MooTools.
 
 authors:
   - Luis Merino (http://luismerino.name)
@@ -11,7 +11,7 @@ license:
 
 requires:
   core/1.2.4:   '*'
-  more/1.2.4.1:   'Class.Occlude.js','Log.js','Class.Binds.js'
+  more/1.2.4.1:   'Element.Forms','Element.Shortcuts','Class.Occlude.js','Log.js','Class.Binds.js'
 
 provides:
   - PassShark
@@ -63,6 +63,8 @@ var PassShark = new Class({
 	}.protect(),
 
 	_cloakInput: function(params){
+		// Grab position styles from the original element
+		var styles = this.origElement.getStyles(['position','left','top','right','bottom']);
 		// Display none the original element.
 		this.origElement.hide();
 		var standardMaxLength = 255;
@@ -76,9 +78,9 @@ var PassShark = new Class({
 			'tabindex': params.tabindex != '' ? params.tabindex : ''
 		}) : {};
 		// Adding the new text field.
-		var input = new Element('input', attributes).inject(this.origElement, 'after');
+		var input = new Element('input', attributes).setStyles(styles).inject(this.origElement, 'after');
 		// Log if injection in the DOM was right.
-		this.log('inject element: ', input);
+		if (this.options.debug) this.log('Injecting element: ', input);
 		// Adapt label to new field.
 		$pick(this.$E('label[for='+params.id+']'), new Element('label')).setProperty('for', opts.prefix + params.id);
 		// Disable tabindex.
