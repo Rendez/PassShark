@@ -1,0 +1,97 @@
+/*
+---
+Description: Syntax CSS file for Lighter.js - Syntax Highlighter written in MooTools.
+
+License: MIT-style license
+
+Authors:
+- Nathan Querido
+- Jose Prado
+
+Copyright:
+- QUERIDODESIGN, Switzerland
+- Copyright (©) 2009 [Jose Prado](http://pradador.com/)
+...
+*/
+
+div.content_container pre {
+	font-family:  'andale mono', 'lucida console', monospace;
+	font-size: 11px;
+	line-height: 1.5em;
+	letter-spacing: 0;
+	background: #FFF;
+	border: 1px solid #CCC;
+	border-bottom: 2px solid #AAA;
+	padding: 10px;
+}
+
+div.content_container pre span.kw1 {
+	color: #0099ff;
+	background: #f4faff;
+}
+
+div.content_container pre span.kw2 {
+	color: #0066cc;
+}
+
+div.content_container pre span.kw3 {
+	color: #AA2A03;
+}
+
+div.content_container pre span.kw4 {
+	color: #333;
+}
+
+div.content_container pre span.se0 {
+	color: #0066cc;
+}
+
+div.content_container pre span.st0 {
+	color: #cc6633;
+	background: #fffdf7;
+}
+
+div.content_container pre span.co1 {
+	color: #999;
+}
+
+div.content_container pre span.me0 {
+	color: #006699;
+}
+
+div.content_container div.css pre {
+
+}
+
+div.content_container div.css pre span.kw1 {
+	color: #0099ff;
+	background: #f4faff;
+}
+
+div.content_container div.css pre span.me0 {
+	color: #cc6633;
+	background: #fffdf7;
+}
+
+div.content_container div.css pre span.kw3,
+div.content_container div.css pre span.kw4,
+div.content_container div.css pre span.nu0  {
+	color: #cc6633;
+	background: #fffdf7;
+}
+
+/*div.content_container div.css pre span.nu0 {
+	color: #0099ff;
+	background: #f4faff;
+}*/
+
+div.content_container div.php pre span.me0,
+div.content_container div.php pre span.kw1 {
+	color: #006699;
+	background: #FFF;
+}
+
+div.content_container div.php pre span.st0 {
+	color: #0099ff;
+	background: #f4faff;
+}

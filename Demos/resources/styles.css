@@ -1,0 +1,219 @@
+/*
+---
+Description: PassShark v1.0 - iPhone style password masking using MooTools.
+
+License: MIT-style license
+
+Authors:
+- Nathan Querido
+- Julian Querido
+
+Copyright:
+- QUERIDODESIGN, Switzerland
+...
+*/
+
+/* @group GLOBALS :: jsaq ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	overflow-x: visible!; /* IE 7 hack*/
+	overflow-y: auto!;
+}
+
+body {
+	color: #333;
+	font-size: 12px;
+	line-height: 16px;
+	font-family: Arial;
+	letter-spacing: 1px;
+	background: #F2F2F2;
+}
+
+::-moz-selection {
+	background:#EBEBEB;
+	color:#AA2A03;
+}
+
+::selection {
+	background:#EBEBEB;
+	color:#AA2A03;
+}
+
+a, a:visited {
+	color: #333;
+	border-bottom: 1px solid #CCC;
+	padding: 0 3px 1px 3px;
+	background: #FFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #AA2A03;
+	border-bottom: 1px solid #AA2A03;
+}
+
+ul {
+	margin: 0 0 25px 0;
+}
+
+ul li {
+	line-height: 18px;
+	display: list-item;
+	padding: 0 0 12px 5px;
+	margin: 0 0 0 15px;
+	list-style-image: url(http://www.queridodesign.net//images/nav/bullet.png);
+	width: 100%;
+}
+
+/* @end ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = */
+
+/* @group HTML TEXT TAGS :: nfq ::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+p {
+	margin: 0 0 25px 0;
+}
+
+h1 {
+	font-size: 16px;
+	line-height: 24px;
+	color: #095473;
+	text-shadow: #FFF 1px 1px 1px;
+	margin-bottom: 5px;
+}
+
+h2 {
+	font-size: 14px;
+	line-height: 24px;
+	color: #095473;
+	text-shadow: #FFF 1px 1px 1px;
+	margin-bottom: 5px;
+}
+
+em {
+	font-style: italic;
+}
+
+/* @end ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = */
+
+/* @group BOX PROPERTIES :: nfq ::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+/* @end ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = */
+
+/* @group PAGE LAYOUT :: nfq :::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#header,
+#content,
+#footer {
+	width: 98%;
+	padding: 0 1% 0 1%;
+	float: left;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0){ /* Safari hack :: nfq */
+#header,
+#content,
+#footer {
+	padding: 0 1.1% 0 1%;
+	min-width: 98%;
+	width: auto;
+	}
+}
+
+.header_container,
+.content_container,
+.footer_container {
+	width: 782px;
+	padding: 0 20px;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+}
+
+/* @end ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = */
+
+/* @group HEADER :: nfq ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#header {
+	height: 105px;
+	background: #F2F2F2 url(http://www.queridodesign.net/images/nav/header_bg.png) left top repeat-x;
+}
+
+.header_container {
+	height: 58px;
+}
+
+a.logo {
+	background: url(http://www.queridodesign.net/images/nav/logo.png) left 10px no-repeat;
+	width: 184px;
+	height: 50px;
+	float: left;
+	display: block;
+	border: 0;
+}
+
+/* @end ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = */
+
+/* @group CONTENT :: nfq :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#content {
+	background: #F2F2F2;
+	padding-bottom: 20px;
+}
+
+/* @end ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = */
+
+/* @group FOOTER :: nfq ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+#footer {
+	font-size: 11px;
+	color: #666;
+	background: #FFF url(http://www.queridodesign.net/images/nav/footer_bg.png) right top repeat-x;
+	height: 40px;
+}
+
+#footer a:link, #footer a:visited {
+	color: #333;
+	border: 0;
+}
+
+#footer a:hover {
+	color: #AA2A03;
+}
+
+.footer_text {
+	width: 100%;
+	float: left;
+	line-height: 40px;
+}
+
+/* @end ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = */
+
+/* @group STYLED INPUT :: nfq ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+input {
+	font-family: Arial;
+	font-size: 14px;
+	color: #333;
+	letter-spacing: 1px;
+	background: url(../resources/input.png) left top no-repeat;
+	line-height: 18px;
+	width: 220px;
+	padding: 5px 10px;
+	border: 0;
+	outline: 0;
+}
+
+/* @end ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = ::::: = */

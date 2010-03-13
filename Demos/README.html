@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>PassShark v1.1</title>
+		<meta name="Language" content="English" />
+		<meta name="copyright" content="Copyright © 2009 QUERIDODESIGN" />
+		<meta name="publisher" content="QUERIDODESIGN" />
+		<meta name="author" content="Nathan Querido, Luis Merino" />
+		<link rel="shortcut icon" type="image/ico" href="http://www.queridodesign.net/images/icons/favicon.ico" />
+		<link href="resources/styles.css" rel="stylesheet" type="text/css" />
+		<link href="resources/syntax.css" rel="stylesheet" type="text/css" />
+		<!--[if IE]>
+			<style type="text/css">
+				#header,
+				#content {
+					display: none
+				}
+				#ie_container {
+					width: 400px;
+					height: 500px;
+					margin: 0 auto;
+				}
+				#ie_container p {
+					text-align: center;
+					margin: 200px 0 0 0;
+				}
+				#ie_container h1 {
+					text-align: center;
+				}
+			</style>
+		<![endif]-->
+		<script type="text/javascript" charset="utf-8" src="Mootools-Core_1.2.4.js"></script>
+		<script type="text/javascript" charset="utf-8" src="Mootools-More_1.2.4.2.js"></script>
+		<script type="text/javascript" charset="utf-8" src="resources/Lighter.Full.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../Source/PassShark.js"></script>
+		<script type="text/javascript">
+			window.addEvent('domready', function() {
+
+				// INITIALISE THE SYNTAX HIGHLIGHT Lighter.js CLASS :: nfq
+				$$('textarea[name="code"]').light({
+					jsStyles: 'false',
+					indent: '4',
+					// editable: 'false'
+				});
+
+				// AUTO OPEN NEW WINDOW FOR ALL 'a href' IN CONTENT DIV :: nfq
+				$$('#content a').each(function(anchor){
+					if (anchor.target != '_self') anchor.target = '_blank';
+				});
+
+				new PassShark('sample_pass');
+
+			});
+		</script>
+	</head>
+	<body>
+
+		<!--[if IE]>
+			<div id="ie_container">
+				<p>
+					<h1>Your are using Internet Explorer 6 or 7</h1>
+					This demo has been been tested on Safari 3+, Firefox 3+ or Opera 10+
+				</p>
+			</div>
+		<![endif]-->
+
+		<div id="header">
+			<div class="header_container">
+				<a href="http://www.queridodesign.net" class="logo"></a>
+			</div>
+		</div>
+
+		<div id="content">
+			<div class="content_container">
+				<h1>PassShark - iPhone style password masking using MooTools</h1>
+				<p>
+					PassShark.js is a free and easy-to-implement password masking class developed using MooTools.<br />
+					Inspired and based on the excellent iPhone and iPod touch password dialogue.
+				</p>
+
+				<p>
+					This is our first officially released MooTools plugin, with many more already in development.<br />
+					PassShark is a small component in a series of Form based plugins, specifically being created<br />
+					for the next major release of Ether.Flex CMS, v2.
+				</p>
+
+				<h2>A brief history</h2>
+				<p>
+					Recently there has been a debate regarding password fields and usability. The main arguments centre<br />
+					around two concepts: <em>1-Safety</em> and <em>2-Accessibility</em> of the presentation methods. If interested, please read<br />
+					this <a href="http://blog.decaf.de/2009/07/iphone-like-password-fields-using-jquery/">blog post</a>
+					by Stefan Ullrich, the author of the jQuery plugin which inspired PassShark. His post is a<br />
+					basic analysis in response to <a href="http://www.useit.com/alertbox/passwords.html">Stop Password Masking</a> written by Jakob Nielsen.
+				</p>
+
+				<p>
+					To summarise, the goal with delayed password masking, is to help the user through a less painful way of<br />
+					populating forms and specifically password fields. This methodology is fast becoming popular<br />
+					on Mobile Devices, Desktop applications and the Web browser alike... We think this is a good thing!
+				</p>
+
+				<h2>The Demo</h2>
+				<p>
+					<input type="password" id="sample_pass" />
+				</p>
+
+				<h2>Features and Compatibility</h2>
+					<ul>
+						<li>Written in MooTools. Requires -Core version 1.2.4 + and -More 1.2.4.2 +</li>
+						<li>Tested on Safari 3+, Firefox 3+, Opera 10+, Internet Explorer 6 and 7.</li>
+						<li>No need to modify your original HTML. The password field is automatically found by type (input type="password").</li>
+						<li>Unobtrusive: users with Javascript deactivated still get the standard 'masked' password field.</li>
+						<li>Supports copy & paste.</li>
+					</ul>
+
+				<h2>Usage</h2>
+				<p>
+					<textarea class="js" name="code">
+//  1_ Include MooTools-Core and MooTools-More* in your document head
+<script type="text/javascript" charset="utf-8" src="Mootools-Core_1.2.4.js"></script>
+<script type="text/javascript" charset="utf-8" src="Mootools-More_1.2.4.2.js"></script>
+
+// 2_ Include the PassShark script in your document head
+<script type="text/javascript" charset="utf-8" src="PassShark.js"></script>
+
+// 3_ Initialise PassShark, where 'sample_pass' is the id of your input, such as: id="sample_pass"
+<script type="text/javascript">
+	window.addEvent('domready', function(){
+		new PassShark('sample_pass',{
+				interval: 200,
+				duration: 2000,
+				replacement: '%u25CF',
+				debug: false
+		});
+	});
+</script>
+
+// Dependencies: included is the complete MooTools-More* package, but you can download your own build.
+					</textarea>
+				</p>
+
+				<h2>Dependencies</h2>
+				<ul>
+					<li>A full version of <a href="http://mootools.net/download">MooTools-Core</a> (included, 70kb compressed) provides everything you'll need.</li>
+					<li>From <a href="http://mootools.net/more">MooTools-More</a>, the following components are required: <em>Class.Occlude.js, Log.js, Class.Binds.js</em></li>
+				</ul>
+
+				<h2>Options</h2>
+				<ul>
+					<li><strong>interval</strong> Time in milliseconds PassShark checks for newly entered characters.</li>
+					<li><strong>duration</strong> Delay in milliseconds for the last inputted character.</li>
+					<li><strong>replacement</strong> The <a href="http://www.fileformat.info/format/w3c/entitytest.htm?sort=Unicode+Character">unicode</a> symbol which replaces (masks) already inputted characters. Default is '%u25CF'.<br /> <em>Note</em> '%u....' prefix is needed in Javascript for utf-8 encoding.</li>
+					<li><strong>debug</strong> Displays actions in the console at runtime, to help debug your implementation. Default is 'false'.</li>
+				</ul>
+
+				<h2>Notes and Fixes</h2>
+				<ul>
+					<li>The "onStateChange" event is commented so that the activate() and deactivate() methods,<br />
+					when implemented, can be executed with fireEvent() if needed.</li>
+				</ul>
+
+				<strong>PassShark with MooTools resolves many issues found in other implementations, specifically:</strong><br /><br />
+				<ul>
+					<li>Inability to use ' (apostrophe) characters.</li>
+					<li>The cursor would move to the end on any key stroke, especially annoying if the cursor is elsewhere.</li>
+					<li>When converting the last character-to-symbol with the a duration delay, the input field is focused,<br />
+						which is irritating if the input field is previously unfocused (blur).</li>
+					<li>Errors on deletion of the original field value, which is highly unsafe.</li>
+					<li>Deleting a multiple character selection would cause the same errors as stated above and others.</li>
+					<li>Deleting a single character wouldn't work if the character was not the last one.</li>
+				</ul>
+
+				<h2>Release date, Source code and Notes</h2>
+				v1.0 released: November 14th, 2009.<br />
+				Full source code, this README file and other Notes can be found on GitHub: <a href="http://github.com/Rendez/MooTools">http://github.com/Rendez/MooTools</a>
+				<br /><br />
+
+				<h2>License</h2>
+				PassShark is released under the Open Source <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div class="footer_container">
+				<div class="footer_text">
+					<div class="left">Copyright © 2009<a href="http://www.queridodesign.net">QUERIDO<strong>DESIGN</strong></a> | Visit our <a href="http://www.queridodesign.net/blog">Blog</a></div>
+					<div class="right"><a href="mailto:team@queridodesign.net">team@queridodesign.net</a></div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
