@@ -19,7 +19,7 @@ provides:
 */
 
 (function() {
-    var PassShark = this.passShark = new Class({
+    var PassShark = this.PassShark = new Class({
 
         Implements: [Options, Events],
 
